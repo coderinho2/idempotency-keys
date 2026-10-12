@@ -6,8 +6,8 @@ Stripe-style idempotency keys for your own API, stored in Postgres.
 
 A request can be retried, crash partway through, or arrive twice at the
 same moment. Its work still happens once, and every retry gets the same
-answer. A test harness proves this by crashing a request at every point
-it can die, then retrying it.
+answer. A test harness checks this by crashing a request at every point
+where it can fail, then retrying it.
 
 ## The bug this prevents
 
